@@ -1,7 +1,8 @@
 from des import DesKey
 
 
-key = input("Enter DES key: ").encode("utf-8")
+key_short = "superkey"                                              #Key 1
+key_short_des = DesKey(bytes(key_short, "utf-8"))
 ciphertext_hex = input("Enter ciphertext (hex): ").strip()
 
 try:
@@ -13,7 +14,7 @@ if not ciphertext or len(ciphertext) % 8 != 0:
 	raise SystemExit("Ciphertext must contain complete 8-byte DES blocks.")
 
 try:
-	plaintext = DesKey(key).decrypt(ciphertext, padding=True)
+	plaintext = key_short_des.decrypt(ciphertext, initial=bytes(8), padding=True)
 	print("Plaintext: " + plaintext.decode("utf-8"))
 except (ValueError, UnicodeDecodeError) as error:
 	raise SystemExit("Decryption failed. Check the key and ciphertext.") from error

@@ -1,7 +1,6 @@
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.padding import PKCS7
 
-
 key = input("Enter AES key: ").encode("utf-8")
 ciphertext_hex = input("Enter ciphertext (hex): ").strip()
 
@@ -22,3 +21,5 @@ try:
 	print("Plaintext: " + plaintext.decode("utf-8"))
 except (ValueError, UnicodeDecodeError) as error:
 	raise SystemExit("Decryption failed. Check the key and ciphertext.") from error
+
+	
