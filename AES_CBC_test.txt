@@ -1,0 +1,8 @@
+The following ciphertext in hexadecimal notation was produced using the AES algorithm in CBC mode (iv
+= all zeros) with padding and the key thisisonelongkey:
+39 bd 6a 4b bb 32 17 33
+ca da 23 40 fb cb f8 a5
+c9 d8 df 6b de 0a 25 96
+9d 7b 98 13 21 9a ac 0c
+4d 4e b6 52 0b e8 72 71
+d3 19 84 11 d3 a3 ec c8

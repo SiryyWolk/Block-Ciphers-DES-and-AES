@@ -4,7 +4,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 # Note: ECB is insecure for real use because identical plaintext blocks
 # produce identical ciphertext blocks, revealing patterns in the data.
 
-key = "thebestsecretkey"  # 16 bytes = AES-128
+key = "thisisonelongkey"  # 16 bytes = AES-128
 key_bytes = bytes(key, "utf-8")
 print("Key: " + key)
 

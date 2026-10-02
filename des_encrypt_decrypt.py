@@ -19,14 +19,14 @@ print("Long Key Triple?: " + str(key_long_des.is_triple()))
 
 key_des = key_short_des
 
-plaintext = "thebestplaintext"
+plaintext = "Hello"
 plaintext_bytes = bytes(plaintext, "utf-8")
 print("Plaintext: " + plaintext)
 
-ciphertext_bytes = key_des.encrypt(plaintext_bytes)
+ciphertext_bytes = key_des.encrypt(plaintext_bytes, padding=True)
 ciphertext = ciphertext_bytes.hex()
 print("Ciphertext: " + ciphertext)
 
-plaintext_bytes_2 = key_des.decrypt(ciphertext_bytes)
+plaintext_bytes_2 = key_des.decrypt(ciphertext_bytes, padding=True)
 plaintext_2 = str(plaintext_bytes_2, "utf-8")
 print("Original Plaintext: " + plaintext_2)
